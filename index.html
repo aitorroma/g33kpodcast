@@ -216,9 +216,27 @@
         }
         
         .episode-date {
-            color: #a0a0a0;
-            font-size: 0.9rem;
-            margin: 0 0 10px 0;
+            color: #888;
+            margin: 0;
+            font-size: 0.9em;
+        }
+        
+        .episode-info {
+            display: flex;
+            gap: 15px;
+            color: #888;
+            margin: 5px 0;
+            font-size: 0.85em;
+        }
+        
+        .episode-size, .episode-duration {
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .episode-size i, .episode-duration i {
+            margin-right: 5px;
+            color: #39ff14;
         }
         
         .episode-number {
@@ -621,6 +639,9 @@
                         const title = item.querySelector('title').textContent;
                         const enclosure = item.querySelector('enclosure');
                         const audioSrc = enclosure ? enclosure.getAttribute('url') : '';
+                        const audioLength = enclosure ? enclosure.getAttribute('length') : 0;
+                        // Convertir el tamaño en bytes a MB
+                        const audioSizeMB = audioLength ? (parseInt(audioLength) / (1024 * 1024)).toFixed(2) + ' MB' : 'Desconocido';
                         const pubDate = new Date(item.querySelector('pubDate').textContent);
                         const formattedDate = pubDate.toLocaleDateString('es-ES', {
                             year: 'numeric',
@@ -650,6 +671,10 @@
                             <div class="episode-content">
                                 <h3 class="episode-title">${title}</h3>
                                 <p class="episode-date">${formattedDate}</p>
+                                <p class="episode-info">
+                                    <span class="episode-size"><i class="fas fa-file-audio"></i> ${audioSizeMB}</span>
+                                    <span class="episode-duration" data-src="${audioSrc}"><i class="fas fa-clock"></i> Calculando...</span>
+                                </p>
                                 <div class="episode-actions">
                                     <button class="action-btn info-btn" data-index="${index}">
                                         <i class="fas fa-info-circle"></i> Info
@@ -657,6 +682,22 @@
                                 </div>
                             </div>
                         `;
+                        
+                        // Calcular la duración del audio
+                        const durationElement = episodeItem.querySelector('.episode-duration');
+                        if (durationElement && audioSrc) {
+                            const tempAudio = new Audio();
+                            tempAudio.src = audioSrc;
+                            tempAudio.addEventListener('loadedmetadata', function() {
+                                const duration = tempAudio.duration;
+                                const minutes = Math.floor(duration / 60);
+                                const seconds = Math.floor(duration % 60);
+                                durationElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+                            });
+                            tempAudio.addEventListener('error', function() {
+                                durationElement.textContent = 'No disponible';
+                            });
+                        }
                         
                         // Añadir evento al botón de información
                         const infoBtn = episodeItem.querySelector('.info-btn');
