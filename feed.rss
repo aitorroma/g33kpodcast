@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:podcast="https://podcastindex.org/namespace/1.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>G33K TEAM</title>
+    <description>G33KTEAM es una comunidad de profesionales y entusiastas unidos por la pasión por la tecnología, la inteligencia artificial y el desarrollo de software. Somos un punto de encuentro donde arquitectos de software, especialistas en marketing digital y expertos en IA comparten conocimientos, experiencias y recursos para impulsar la innovación tecnológica.
+Nuestro ecosistema fomenta la colaboración entre mentes creativas y analíticas, creando un espacio donde las ideas se transforman en soluciones prácticas para los desafíos tecnológicos actuales. En G33KTEAM, combinamos rigor técnico con visión estratégica, ayudando a nuestros miembros a mantenerse a la vanguardia en un mundo digital en constante evolución.
+¡Únete a G33KTEAM y forma parte de una comunidad que está redefiniendo el futuro de la tecnología
+</description>
+    <author>
+      <name>G33K TEAM</name>
+      <uri>https://www.youtube.com/channel/UCmhVhM793njn02ArOCv3yDA</uri>
+    </author>
+    <link>https://www.youtube.com/channel/UCmhVhM793njn02ArOCv3yDA</link>
+    <atom:link href="https://podcast.g33k.team" rel="self" type="application/rss+xml"/>
+    <language>en</language>
+    <itunes:author>G33K TEAM</itunes:author>
+    <itunes:type>episodic</itunes:type>
+    <itunes:explicit>No</itunes:explicit>
+    <itunes:image href="https://podcast.g33k.team/podcast.jpg"/>
+    <itunes:category text="Technology"/>
+    <item>
+      <guid isPermaLink="false">yt:video:5G9As2LuS9Q</guid>
+      <title>G33K TEAM - Capítulo 4 temporada 1</title>
+      <description>📺 G33K TEAM Capítulo 4 Temporada 1 🚀 #InteligenciaArtificial #Computación #Automatización
+¡Únete a nuestra comunidad! https://t.me/g33k_team
+
+¡El equipo de expertos en tecnología regresa con un episodio lleno de innovaciones disruptivas! 🧠 En este cuarto capítulo, exploramos las fronteras de la IA, computación cuántica y herramientas de automatización:
+
+
+🔊 OpenAI.fm - La revolución de los nuevos sistemas TTS y STT de OpenAI que están transformando la interacción por voz
+⚛️ Computación Cuántica - Analizamos los últimos avances y cómo están cambiando el panorama del procesamiento de datos
+🤖 Second Me (secondme.io) - La primera plataforma de identidad AI open-source que representa tu auténtico yo con privacidad total y memoria jerárquica
+🌐 Zen Browser - Solución definitiva para el caos digital con gestión inteligente de pestañas y flujos de trabajo
+
+Y mucho mas!!
+
+Nuestros geeks comparten casos de uso reales y experiencias prácticas para implementar estas tecnologías en tu día a día, con especial énfasis en cómo Second Me está creando un nuevo paradigma de identidad digital que representa en lugar de reemplazar al usuario.
+#InteligenciaArtificial #ComputaciónCuántica #Automatización #G33KTEAM #SecondMe</description>
+      <pubDate>2025-03-23T10:12:00+00:00</pubDate>
+      <link>https://www.youtube.com/watch?v=5G9As2LuS9Q</link>
+      <enclosure url="https://podcast.g33k.team/videos/5G9As2LuS9Q.mp3" length="100000000" type="audio/mpeg"/>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>No</itunes:explicit>
+      <itunes:image href="https://i2.ytimg.com/vi/5G9As2LuS9Q/hqdefault.jpg"/>
+    </item>
+    <item>
+      <guid isPermaLink="false">yt:video:IzsrwssT2ok</guid>
+      <title>Geek Talks - Capítulo 4 temporada 1</title>
+      <description>Turn your videos into live streams with https://restream.io</description>
+      <pubDate>2025-03-22T05:17:26+00:00</pubDate>
+      <link>https://www.youtube.com/watch?v=IzsrwssT2ok</link>
+      <enclosure url="https://podcast.g33k.team/videos/IzsrwssT2ok.mp3" length="100000000" type="audio/mpeg"/>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>No</itunes:explicit>
+      <itunes:image href="https://i2.ytimg.com/vi/IzsrwssT2ok/hqdefault.jpg"/>
+    </item>
+    <item>
+      <guid isPermaLink="false">yt:video:i3DIIoTF1f4</guid>
+      <title>G33K TEAM - Capítulo 3 temporada 1</title>
+      <description>🎙️ Geek Talks - Capítulo 3  
+
+🔥 ¡Bienvenidos al tercer capítulo de Geek Talks! 🚀  
+
+Hoy seguimos explorando herramientas y tecnologías clave que pueden optimizar nuestros flujos de trabajo y mejorar la eficiencia.  
+Hablamos sobre TypeScript en Go, una nueva implementación para ejecutar TypeScript en entornos nativos con mejor rendimiento; Gemini Deep Research, una exploración avanzada con modelos de Google; y Gemma 3, el nuevo modelo multimodal Open Source de Google, optimizado para tareas de IA.  
+También profundizamos en Cloudflare LaLiga Bypass, una automatización creada por *Aitor Roma* para garantizar la continuidad de negocio cuando Cloudflare bloquea accesos durante la transmisión de partidos de LaLiga. Además, exploramos LLMs TXT, herramientas para procesamiento de lenguaje natural, y analizamos los avances en TypeScript Native.  
+
+📌 No te lo pierdas y únete a nuestra comunidad para seguir aprendiendo juntos.</description>
+      <pubDate>2025-03-16T04:18:23+00:00</pubDate>
+      <link>https://www.youtube.com/watch?v=i3DIIoTF1f4</link>
+      <enclosure url="https://podcast.g33k.team/videos/i3DIIoTF1f4.mp3" length="100000000" type="audio/mpeg"/>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>No</itunes:explicit>
+      <itunes:image href="https://i2.ytimg.com/vi/i3DIIoTF1f4/hqdefault.jpg"/>
+    </item>
+    <item>
+      <guid isPermaLink="false">yt:video:L_i6fZx4gHU</guid>
+      <title>G33K TEAM Capitulo 2 temporada 1</title>
+      <description>📺 G33K TEAM Capítulo 2 Temporada 1 🚀  #InteligenciaArtificial #Automatización #Desarrollo 
+
+¡Únete a nuestra comunidad! https://t.me/g33k_team
+
+¡El equipo de expertos en tecnología regresa con un episodio cargado de novedades! 🧠
+En este segundo capítulo, exploramos las últimas innovaciones en IA y desarrollo:
+
+Kaiban JS - Framework multiagente con tableros Kanban para visualizar flujos de IA 📊
+https://www.kaibanjs.com/
+Modelos de difusión LLM - La nueva revolución en procesamiento de lenguaje de Inception Labs ⚡
+https://www.inceptionlabs.ai/news
+Proxy Light de Brows - Automatización de navegadores con agentes inteligentes 🌐
+https://github.com/convergence-ai/proxy-lite
+Process Mining - Optimización de procesos empresariales con Celonis 📈
+https://www.celonis.com/
+Cerebras - Hardware especializado para acelerar el entrenamiento de IA 💻
+https://cerebras.ai/
+Scraping inteligente - Herramientas como GPT Crawler y Crow for AI 🔍
+https://github.com/BuilderIO/gpt-crawler
+https://github.com/banteg/crowforai
+Gestión de pestañas - Soluciones para el caos digital con Zen Browser 🗂️
+https://www.zen-browser.com/
+Consulta de certificados SSL - Información detallada sobre seguridad web
+https://crt.sh/
+
+Nuestros geeks comparten casos de uso reales y experiencias prácticas para implementar estas tecnologías en tu día a día.
+
+#InteligenciaArtificial #Automatización #Desarrollo #G33KTEAM</description>
+      <pubDate>2025-03-08T22:11:31+00:00</pubDate>
+      <link>https://www.youtube.com/watch?v=L_i6fZx4gHU</link>
+      <enclosure url="https://podcast.g33k.team/videos/L_i6fZx4gHU.mp3" length="100000000" type="audio/mpeg"/>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>No</itunes:explicit>
+      <itunes:image href="https://i1.ytimg.com/vi/L_i6fZx4gHU/hqdefault.jpg"/>
+    </item>
+    <item>
+      <guid isPermaLink="false">yt:video:yZKa6FRYF7c</guid>
+      <title>G33K TEAM Capitulo 2 temporada 1</title>
+      <description/>
+      <pubDate>2025-03-08T05:17:40+00:00</pubDate>
+      <link>https://www.youtube.com/watch?v=yZKa6FRYF7c</link>
+      <enclosure url="https://podcast.g33k.team/videos/yZKa6FRYF7c.mp3" length="100000000" type="audio/mpeg"/>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>No</itunes:explicit>
+      <itunes:image href="https://i2.ytimg.com/vi/yZKa6FRYF7c/hqdefault.jpg"/>
+    </item>
+    <item>
+      <guid isPermaLink="false">yt:video:sg32ulzTsMk</guid>
+      <title>G33K TEAM Capitulo 1 temporada 1</title>
+      <description>Bienvenidos al primer episodio de G33K TEAM, donde la innovación tecnológica se encuentra con el mundo real. En este capítulo inaugural, exploramos la intersección entre la inteligencia artificial, las estrategias de marketing digital y los principios de arquitectura de software que están transformando el panorama empresarial actual. Analizamos las últimas tendencias, compartimos casos de éxito y debatimos sobre cómo estas tecnologías están revolucionando la forma en que las empresas operan y se conectan con sus clientes. Acompáñanos en este viaje técnico donde descifraremos los componentes clave para construir soluciones tecnológicas escalables y efectivas en el mercado actual</description>
+      <pubDate>2025-03-05T10:36:10+00:00</pubDate>
+      <link>https://www.youtube.com/watch?v=sg32ulzTsMk</link>
+      <enclosure url="https://podcast.g33k.team/videos/sg32ulzTsMk.mp3" length="100000000" type="audio/mpeg"/>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>No</itunes:explicit>
+      <itunes:image href="https://i4.ytimg.com/vi/sg32ulzTsMk/hqdefault.jpg"/>
+    </item>
+  </channel>
+</rss>
