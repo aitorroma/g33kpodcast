@@ -12,11 +12,11 @@ Nuestro ecosistema fomenta la colaboración entre mentes creativas y analíticas
     </author>
     <link>https://www.youtube.com/channel/UCmhVhM793njn02ArOCv3yDA</link>
     <atom:link href="https://podcast.g33k.team" rel="self" type="application/rss+xml"/>
-    <language>en</language>
+    <language>es</language>
     <itunes:author>G33K TEAM</itunes:author>
     <itunes:type>episodic</itunes:type>
     <itunes:explicit>No</itunes:explicit>
-    <itunes:image href="https://podcast.g33k.team/podcast.jpg"/>
+    <itunes:image href="https://podcast.g33k.team/podcast.png"/>
     <itunes:category text="Technology"/>
     <item>
       <guid isPermaLink="false">yt:video:5G9As2LuS9Q</guid>
