@@ -9,8 +9,13 @@
     <!-- Favicon -->
     <link rel="icon" href="podcast.jpg" type="image/jpeg">
     
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <!-- Shikwasa Player CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shikwasa@2.2.1/dist/style.min.css">
+    <!-- Shikwasa Chapter Plugin CSS (opcional) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shikwasa@2.2.1/dist/shikwasa.chapter.min.css">
     
     <!-- Estilos personalizados -->
     <style>
@@ -193,77 +198,99 @@
         }
         
         .episode-item {
-            display: flex;
-            align-items: center;
+            background-color: #1a1a3a;
+            border-radius: 10px;
             padding: 1rem;
-            border-bottom: 1px solid rgba(0, 255, 255, 0.3);
-            transition: all 0.3s ease;
-            background-color: rgba(255, 255, 255, 0.05);
-            margin-bottom: 10px;
-            border-radius: 5px;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
         }
         
-        .episode-item:hover {
-            background-color: rgba(0, 255, 255, 0.1);
-            transform: translateX(5px);
-        }
-        
-        .episode-number {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            line-height: 30px;
-            text-align: center;
-            background-color: var(--neon-pink);
-            color: white;
-            border-radius: 50%;
-            margin-right: 10px;
-            font-weight: bold;
-            box-shadow: 0 0 5px var(--neon-pink);
+        .episode-content {
+            flex: 1;
         }
         
         .episode-title {
+            margin: 0 0 5px 0;
             font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: white;
         }
         
         .episode-date {
+            color: #a0a0a0;
             font-size: 0.9rem;
-            color: var(--neon-blue);
-            margin-bottom: 0.5rem;
-            text-shadow: 0 0 3px var(--neon-blue);
+            margin: 0 0 10px 0;
         }
         
-        .episode-description {
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-            color: rgba(255, 255, 255, 0.9);
+        .episode-number {
+            background-color: #39ff14;
+            color: black;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 5px #39ff14;
+        }
+        
+        .episode-number:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px #39ff14, 0 0 15px #39ff14;
+        }
+        
+        .episode-number i {
+            font-size: 1rem;
         }
         
         .episode-actions {
             display: flex;
-            gap: 0.5rem;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .action-btn {
+            border: none;
+            border-radius: 20px;
+            padding: 5px 15px;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+        }
+        
+        .action-btn i {
+            margin-right: 5px;
         }
         
         .play-btn {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background-color: var(--neon-pink);
-            color: white;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            border: none;
-            box-shadow: 0 0 5px var(--neon-pink);
+            background-color: #39ff14;
+            color: black;
+            box-shadow: 0 0 5px #39ff14;
         }
         
         .play-btn:hover {
-            background-color: var(--neon-pink);
-            transform: translateY(-2px);
-            box-shadow: 0 0 10px var(--neon-pink), 0 0 15px var(--neon-pink);
+            background-color: #4dff33;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px #4dff33, 0 0 15px #4dff33;
+        }
+        
+        .info-btn {
+            background-color: var(--neon-blue);
+            color: rgb(27, 26, 26);
+            box-shadow: 0 0 5px var(--neon-blue);
+        }
+        
+        .info-btn:hover {
+            background-color: var(--neon-blue);
+            transform: scale(1.05);
+            box-shadow: 0 0 10px var(--neon-blue), 0 0 15px var(--neon-blue);
         }
         
         footer {
@@ -420,6 +447,21 @@
                 height: 150px;
             }
         }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .logo {
+                width: 150px;
+                height: 150px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -434,8 +476,16 @@
                 <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJ3aGl0ZSIgZD0iTTEyIDJhMTAgMTAgMCAwIDAgMCAyMGExMCAxMCAwIDAgMCAwLTIwem0wIDE0YTQgNCAwIDEgMSAwLThhNCA0IDAgMCAxIDAgOHptMC0xMmE4IDggMCAxIDAgMCAxNmE4IDggMCAwIDAgMC0xNnptMTQgMTRhMyAzIDAgMSAxIDAgNngzIDNhMyAzIDAgMCAxIDAtNnptLTggOHptLTQtNHoiLz48L3N2Zz4=" alt="Apple Podcasts" />
                 Apple Podcasts
             </a>
+            <a href="https://www.ivoox.com/podcast-g33k-team_sq_f12575205_1.html" class="subscribe-btn" target="_blank">
+                <img src="https://prensa.ivoox.com/wp-content/uploads/2021/10/app_android-300x300.png" alt="Ivoox" style="width: 24px; height: 24px;" />
+                Ivoox
+            </a>
             <div class="subscribe-btn copy-btn" id="copy-rss">
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJ3aGl0ZSIgZD0iTTYuMTggMTUuNjRBMi4xOCAyLjE4IDAgMCAxIDggMTcuODJhMi4xOCAyLjE4IDAgMCAxLTIuMTggMi4xOGMtMS4yMSAwLTIuMTgtLjk3LTIuMTgtMi4xOGMwLTEuMjEuOTctMi4xOCAyLjE4LTIuMThtMTAuMDkgNC4wNGMtLjczLTMuNjgtMy42Ny02LjYyLTcuMzUtNy4zNXYtMS41NmMuNDUgMCA0LjU5Ljk1IDguMDUgNC40MXYuMDVjMy40NiAzLjQ2IDQuNDIgNy41OSA0LjQyIDguMDVoLTEuNTZjLS43My0zLjY4LTMuNjctNi42Mi03LjM1LTcuMzVtLTEwLjA5IDIuNTZjLTEuNTMgMC0yLjczLTEuMi0yLjczLTIuNzNjMC0xLjUzIDEuMi0yLjczIDIuNzMtMi43M2MxLjUzIDAgMi43MyAxLjIgMi43MyAyLjczYzAgMS41My0xLjIgMi43My0yLjczIDIuNzNtMTAuMDkgMS43OGMtLjczLTIuMDMtMi4yMy0zLjUzLTQuMjYtNC4yNnYtMS41M2MzLjEyLjc3IDUuNTMgMy4xOCA2LjMgNi4zYzAgMCAuMDEuMDEuMDEuMDJoLTEuNTNjLS4wMSAwLS4wMS0uMDEtLjAyLS4wMXYtLjUybS0xMC4wOS0uNzVjLTEuODQgMC0zLjI4LTEuNDQtMy4yOC0zLjI4YzAtMS44NCAxLjQ0LTMuMjggMy4yNC0zLjI4YzEuODQgMCAzLjI4IDEuNDQgMy4yOCAzLjI4YzAgMS44NC0xLjQ0IDMuMjgtMy4yOCAzLjI4bTEwLjA5LjA0Yy0uNzMtMS40LTEuODEtMi40OC0zLjIxLTMuMjF2LTEuNTRjMi4yNC44NyA0IDIuNTkgNC44OCA0Ljg3aC0xLjUzYy0uMDEgMC0uMDEgMC0uMDItLjAxbC0uMTItLjExeiIvPjwvc3ZnPg==" alt="RSS Feed" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48">
+                    <circle cx="24" cy="21.267" r="3.679" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" d="M22.643 24.686L15.591 42.5m9.765-17.814L32.409 42.5m-2.607-6.57c5.834-2.312 9.965-8.01 9.965-14.663C39.767 12.564 32.703 5.5 24 5.5S8.233 12.564 8.233 21.267c0 6.654 4.131 12.35 9.965 14.663"/>
+                    <path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" d="M27.584 30.307c3.595-1.43 6.139-4.94 6.139-9.04c0-5.371-4.352-9.723-9.723-9.723s-9.723 4.352-9.723 9.723c0 4.1 2.544 7.61 6.139 9.04"/>
+                </svg>
                 RSS Feed
                 <span class="tooltip" id="copy-tooltip">Copiar URL del feed</span>
                 <input type="hidden" id="feed-url" value="https://podcast.g33k.team/feed.rss">
@@ -533,7 +583,7 @@
                                 src: audioSrc,
                             },
                             theme: 'dark',
-                            themeColor: '#ef233c',
+                            themeColor: '#39ff14',
                             download: true,
                             speedOptions: [0.75, 1, 1.25, 1.5, 2],
                             preload: 'auto'
@@ -587,99 +637,77 @@
                         // Crear elemento de episodio en formato lista
                         const episodeItem = document.createElement('div');
                         episodeItem.className = 'episode-item';
-                        episodeItem.setAttribute('data-index', index);
-                        episodeItem.setAttribute('data-src', audioSrc);
-                        episodeItem.setAttribute('data-title', title);
-                        episodeItem.setAttribute('data-date', formattedDate);
-                        episodeItem.setAttribute('data-description', description);
                         episodeItem.innerHTML = `
-                            <div class="episode-number">${index + 1}</div>
-                            <div class="episode-info">
-                                <h3 class="episode-title">${title}</h3>
-                                <div class="episode-meta">
-                                    <p class="episode-date">${formattedDate}</p>
-                                </div>
+                            <div class="episode-number" data-src="${audioSrc}" data-title="${title}">
+                                <i class="fas fa-play"></i>
                             </div>
-                            <div class="episode-actions">
-                                <button class="play-btn" data-index="${index}" data-src="${audioSrc}" data-title="${title}"></button>
+                            <div class="episode-content">
+                                <h3 class="episode-title">${title}</h3>
+                                <p class="episode-date">${formattedDate}</p>
+                                <div class="episode-actions">
+                                    <button class="action-btn info-btn" data-index="${index}">
+                                        <i class="fas fa-info-circle"></i> Info
+                                    </button>
+                                </div>
                             </div>
                         `;
                         
-                        // Hacer que todo el elemento sea clickeable para mostrar el modal
-                        episodeItem.style.cursor = 'pointer';
-                        episodeItem.addEventListener('click', function(e) {
-                            // Evitar que se active si se hace clic en el botón de reproducción
-                            if (!e.target.classList.contains('play-btn') && !e.target.closest('.play-btn')) {
-                                showEpisodeModal(
-                                    this.getAttribute('data-title'),
-                                    this.getAttribute('data-date'),
-                                    this.getAttribute('data-description'),
-                                    this.getAttribute('data-src')
-                                );
-                            }
+                        // Añadir evento al botón de información
+                        const infoBtn = episodeItem.querySelector('.info-btn');
+                        infoBtn.addEventListener('click', function() {
+                            showEpisodeModal(
+                                episodeItem.querySelector('.episode-title').textContent,
+                                episodeItem.querySelector('.episode-date').textContent,
+                                description,
+                                episodeItem.querySelector('.episode-number').getAttribute('data-src')
+                            );
                         });
                         
-                        episodesContainer.appendChild(episodeItem);
-                    });
-                    
-                    // Agregar eventos a todos los botones de reproducción después de que se hayan creado
-                    document.querySelectorAll('.play-btn').forEach(button => {
-                        button.addEventListener('click', function(e) {
+                        // Añadir evento al botón de play (ahora en el número del episodio)
+                        const playBtn = episodeItem.querySelector('.episode-number');
+                        playBtn.addEventListener('click', function(e) {
                             e.preventDefault();
                             e.stopPropagation();
                             
                             const audioSrc = this.getAttribute('data-src');
                             const title = this.getAttribute('data-title');
                             
-                            console.log('Intentando reproducir:', audioSrc);
+                            console.log('Reproduciendo:', audioSrc, title);
                             
-                            // Verificar si la URL del audio es válida
-                            const audioElement = document.getElementById('audio-preload');
-                            audioElement.src = audioSrc;
+                            // Limpiar el contenedor del reproductor
+                            const playerContainer = document.getElementById('player-latest');
+                            playerContainer.innerHTML = '';
                             
-                            // Comprobar si el reproductor está inicializado
-                            if (!window.player) {
-                                console.error('El reproductor no está inicializado');
-                                alert('Error: El reproductor no está inicializado correctamente.');
-                                return;
-                            }
+                            // Crear un nuevo reproductor para este episodio
+                            window.player = new window.Shikwasa.Player({
+                                container: playerContainer,
+                                audio: {
+                                    title: title,
+                                    artist: 'G33K TEAM',
+                                    cover: 'podcast.jpg',
+                                    src: audioSrc,
+                                },
+                                theme: 'dark',
+                                themeColor: '#39ff14',
+                                download: true,
+                                speedOptions: [0.75, 1, 1.25, 1.5, 2],
+                                preload: 'auto'
+                            });
                             
-                            try {
-                                // Limpiar el contenedor del reproductor
-                                const playerContainer = document.getElementById('player-latest');
-                                playerContainer.innerHTML = '';
-                                
-                                // Crear un nuevo reproductor para este episodio
-                                window.player = new window.Shikwasa.Player({
-                                    container: playerContainer,
-                                    audio: {
-                                        title: title,
-                                        artist: 'G33K TEAM',
-                                        cover: 'podcast.jpg',
-                                        src: audioSrc,
-                                    },
-                                    theme: 'dark',
-                                    themeColor: '#ef233c',
-                                    download: true,
-                                    speedOptions: [0.75, 1, 1.25, 1.5, 2],
-                                    preload: 'auto'
-                                });
-                                
-                                // Reproducir después de crear el nuevo reproductor
-                                setTimeout(() => {
+                            // Intentar reproducir después de un breve retraso
+                            setTimeout(() => {
+                                try {
                                     window.player.play();
-                                    console.log('Reproduciendo:', audioSrc);
-                                    
-                                    // Desplazarse al reproductor
-                                    document.querySelector('.player-container').scrollIntoView({
-                                        behavior: 'smooth'
-                                    });
-                                }, 300);
-                            } catch (error) {
-                                console.error('Error al reproducir:', error);
-                                alert('Error al reproducir el episodio. Por favor, inténtalo de nuevo.');
-                            }
+                                } catch (error) {
+                                    console.error('Error al reproducir:', error);
+                                }
+                            }, 300);
+                            
+                            // Desplazarse al reproductor
+                            playerContainer.scrollIntoView({ behavior: 'smooth' });
                         });
+                        
+                        episodesContainer.appendChild(episodeItem);
                     });
                 }
             } catch (error) {
@@ -780,7 +808,7 @@
                             src: audioSrc,
                         },
                         theme: 'dark',
-                        themeColor: '#ef233c',
+                        themeColor: '#39ff14',
                         download: true,
                         speedOptions: [0.75, 1, 1.25, 1.5, 2],
                         preload: 'auto'
