@@ -573,7 +573,14 @@
                         });
                         
                         // Extraer una descripción corta
-                        let description = item.querySelector('description').textContent;
+                        let description = item.querySelector('description')?.textContent || '';
+                        
+                        // Si no hay descripción o está vacía, omitir este episodio
+                        if (!description || description.trim() === '') {
+                            console.log(`Omitiendo episodio sin descripción: ${title}`);
+                            return; // Saltar este episodio
+                        }
+                        
                         const descriptionText = description.replace(/<[^>]*>/g, '');
                         const shortDescription = descriptionText.substring(0, 150) + (descriptionText.length > 150 ? '...' : '');
                         
