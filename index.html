@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G33K TEAM Podcast - Tecnología sin filtros</title>
+    <meta name="description" content="G33K TEAM es un grupo de profesionales con habilidades y especialidades diversas en tecnología, que comparten sus experiencias, conocimientos y perspectiva geek sobre el mundo de la tecnología.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="podcast.jpg" type="image/jpeg">
+    
+    <!-- Shikwasa Player CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shikwasa@2.2.1/dist/style.min.css">
+    
+    <!-- Estilos personalizados -->
+    <style>
+        :root {
+            --primary-color: #0A0A2A;
+            --secondary-color: #00FFFF;
+            --accent-color: #FF69B4;
+            --light-color: #FFFFFF;
+            --dark-color: #0A0A2A;
+            --header-bg: #0A0A2A;
+            --neon-blue: #00FFFF;
+            --neon-pink: #FF69B4;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: white;
+            background-color: var(--dark-color);
+        }
+        
+        header {
+            background-color: var(--header-bg);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem 1.5rem;
+            position: relative;
+            background: linear-gradient(180deg, #0A0A2A 0%, #0F0F35 100%);
+        }
+        
+        .logo-container {
+            margin-bottom: 1rem;
+        }
+        
+        .logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            object-fit: contain;
+            border: none;
+            box-shadow: none;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin: 0.5rem 0;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: white;
+            text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue);
+        }
+        
+        .tagline {
+            font-style: italic;
+            color: var(--light-color);
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            opacity: 0.9;
+            text-shadow: 0 0 3px var(--neon-pink), 0 0 5px var(--neon-pink);
+        }
+        
+        .subscribe-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .subscribe-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 12px;
+            background-color: transparent;
+            color: var(--light-color);
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            border: 1px solid var(--neon-blue);
+            box-shadow: 0 0 5px var(--neon-blue);
+            text-shadow: 0 0 2px var(--neon-blue);
+        }
+        
+        .subscribe-btn:hover {
+            background-color: rgba(0, 255, 255, 0.1);
+            transform: translateY(-1px);
+            box-shadow: 0 0 8px var(--neon-blue), 0 0 12px var(--neon-blue);
+        }
+        
+        .subscribe-btn img {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .copy-btn {
+            cursor: pointer;
+            position: relative;
+            border: 1px solid var(--neon-pink);
+            box-shadow: 0 0 5px var(--neon-pink);
+            text-shadow: 0 0 2px var(--neon-pink);
+        }
+        
+        .copy-btn:hover {
+            background-color: rgba(255, 105, 180, 0.1);
+            box-shadow: 0 0 8px var(--neon-pink), 0 0 12px var(--neon-pink);
+        }
+        
+        .tooltip {
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            margin-bottom: 5px;
+        }
+        
+        .copy-btn:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .copy-success {
+            background-color: #4caf50 !important;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .about-section {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+            margin-bottom: 2rem;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            color: white;
+        }
+        
+        h2 {
+            color: white;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+            text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue);
+        }
+        
+        .player-container {
+            margin: 2rem 0;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+        }
+        
+        .episodes {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+            padding: 1rem;
+        }
+        
+        .episode-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.05);
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        
+        .episode-item:hover {
+            background-color: rgba(0, 255, 255, 0.1);
+            transform: translateX(5px);
+        }
+        
+        .episode-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color: var(--neon-pink);
+            color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-weight: bold;
+            box-shadow: 0 0 5px var(--neon-pink);
+        }
+        
+        .episode-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+        
+        .episode-date {
+            font-size: 0.9rem;
+            color: var(--neon-blue);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 3px var(--neon-blue);
+        }
+        
+        .episode-description {
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .episode-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .play-btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: var(--neon-pink);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 0 5px var(--neon-pink);
+        }
+        
+        .play-btn:hover {
+            background-color: var(--neon-pink);
+            transform: translateY(-2px);
+            box-shadow: 0 0 10px var(--neon-pink), 0 0 15px var(--neon-pink);
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(0, 255, 255, 0.2);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .social-icon {
+            font-size: 1.5rem;
+            color: white;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            color: var(--accent-color);
+        }
+        
+        /* Estilos para el modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal {
+            background-color: var(--primary-color);
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 800px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            color: white;
+            border: 1px solid var(--neon-blue);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: white;
+            text-shadow: 0 0 5px var(--neon-pink);
+        }
+        
+        .modal-close:hover {
+            color: var(--neon-pink);
+        }
+        
+        .modal-title {
+            font-size: 1.5rem;
+            margin: 0;
+            padding-right: 20px;
+            color: white;
+            text-shadow: 0 0 5px var(--neon-blue);
+        }
+        
+        .modal-date {
+            font-size: 0.9rem;
+            color: var(--neon-blue);
+            margin-top: 5px;
+            text-shadow: 0 0 3px var(--neon-blue);
+        }
+        
+        .modal-description {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .modal-description a {
+            color: var(--neon-pink);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .modal-description a:hover {
+            text-shadow: 0 0 5px var(--neon-pink);
+            text-decoration: underline;
+        }
+        
+        .modal-description ul, .modal-description ol {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+        
+        .modal-description img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        
+        .modal-play {
+            background-color: var(--neon-pink);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 5px var(--neon-pink);
+        }
+        
+        .modal-play:hover {
+            background-color: var(--neon-pink);
+            box-shadow: 0 0 10px var(--neon-pink), 0 0 15px var(--neon-pink);
+            transform: translateY(-2px);
+        }
+        
+        .modal-play::before {
+            content: "▶";
+            font-size: 0.8rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .logo {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="podcast.jpg" alt="G33K TEAM Logo" class="logo">
+        </div>
+        <h1>G33K TEAM</h1>
+        <p class="tagline">Tecnología sin filtros, directamente desde las trincheras</p>
+        <div class="subscribe-links">
+            <a href="https://podcasts.apple.com/us/podcast/g33k-team/id1804046217" class="subscribe-btn" target="_blank">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJ3aGl0ZSIgZD0iTTEyIDJhMTAgMTAgMCAwIDAgMCAyMGExMCAxMCAwIDAgMCAwLTIwem0wIDE0YTQgNCAwIDEgMSAwLThhNCA0IDAgMCAxIDAgOHptMC0xMmE4IDggMCAxIDAgMCAxNmE4IDggMCAwIDAgMC0xNnptMTQgMTRhMyAzIDAgMSAxIDAgNngzIDNhMyAzIDAgMCAxIDAtNnptLTggOHptLTQtNHoiLz48L3N2Zz4=" alt="Apple Podcasts" />
+                Apple Podcasts
+            </a>
+            <div class="subscribe-btn copy-btn" id="copy-rss">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJ3aGl0ZSIgZD0iTTYuMTggMTUuNjRBMi4xOCAyLjE4IDAgMCAxIDggMTcuODJhMi4xOCAyLjE4IDAgMCAxLTIuMTggMi4xOGMtMS4yMSAwLTIuMTgtLjk3LTIuMTgtMi4xOGMwLTEuMjEuOTctMi4xOCAyLjE4LTIuMThtMTAuMDkgNC4wNGMtLjczLTMuNjgtMy42Ny02LjYyLTcuMzUtNy4zNXYtMS41NmMuNDUgMCA0LjU5Ljk1IDguMDUgNC40MXYuMDVjMy40NiAzLjQ2IDQuNDIgNy41OSA0LjQyIDguMDVoLTEuNTZjLS43My0zLjY4LTMuNjctNi42Mi03LjM1LTcuMzVtLTEwLjA5IDIuNTZjLTEuNTMgMC0yLjczLTEuMi0yLjczLTIuNzNjMC0xLjUzIDEuMi0yLjczIDIuNzMtMi43M2MxLjUzIDAgMi43MyAxLjIgMi43MyAyLjczYzAgMS41My0xLjIgMi43My0yLjczIDIuNzNtMTAuMDkgMS43OGMtLjczLTIuMDMtMi4yMy0zLjUzLTQuMjYtNC4yNnYtMS41M2MzLjEyLjc3IDUuNTMgMy4xOCA2LjMgNi4zYzAgMCAuMDEuMDEuMDEuMDJoLTEuNTNjLS4wMSAwLS4wMS0uMDEtLjAyLS4wMXYtLjUybS0xMC4wOS0uNzVjLTEuODQgMC0zLjI4LTEuNDQtMy4yOC0zLjI4YzAtMS44NCAxLjQ0LTMuMjggMy4yNC0zLjI4YzEuODQgMCAzLjI4IDEuNDQgMy4yOCAzLjI4YzAgMS44NC0xLjQ0IDMuMjgtMy4yOCAzLjI4bTEwLjA5LjA0Yy0uNzMtMS40LTEuODEtMi40OC0zLjIxLTMuMjF2LTEuNTRjMi4yNC44NyA0IDIuNTkgNC44OCA0Ljg3aC0xLjUzYy0uMDEgMC0uMDEgMC0uMDItLjAxbC0uMTItLjExeiIvPjwvc3ZnPg==" alt="RSS Feed" />
+                RSS Feed
+                <span class="tooltip" id="copy-tooltip">Copiar URL del feed</span>
+                <input type="hidden" id="feed-url" value="https://podcast.g33k.team/feed.rss">
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="player-container">
+            <h2>Reproductor</h2>
+            <div id="player-latest"></div>
+        </section>
+        
+        <section class="about-section">
+            <h2>¿Qué es G33K TEAM?</h2>
+            <p>G33K TEAM es un grupo de profesionales con habilidades y especialidades diversas en tecnología, que se han unido para compartir sus experiencias, conocimientos y perspectiva geek sobre el mundo de la tecnología. El equipo está formado por personas con una amplia experiencia en áreas como infraestructura, marketing técnico, inteligencia artificial, automatización, programación y hardware.</p>
+            <h2>Objetivo</h2>
+            <p>El objetivo del grupo es salir de sus "batcuevas" y exponer sus conocimientos de una manera más visible, a través de un videopodcast donde se hablará sin restricciones de lo que más les apasiona, con un enfoque realista y sin adornos, desde el trabajo en las trincheras hasta anécdotas y conocimientos técnicos profundos.</p>
+        </section>
+        
+        <section>
+            <h2>Episodios</h2>
+            <div id="episodes-container" class="episodes">
+                <!-- Los episodios se cargarán dinámicamente con JavaScript -->
+            </div>
+        </section>
+    </div>
+    
+    <!-- Modal para mostrar la descripción completa -->
+    <div class="modal-overlay" id="episode-modal-overlay">
+        <div class="modal">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <h2 class="modal-title" id="modal-title"></h2>
+            <p class="modal-date" id="modal-date"></p>
+            <div class="modal-description" id="modal-description"></div>
+            <button class="modal-play" id="modal-play">Reproducir episodio</button>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 G33K TEAM. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <!-- Puedes agregar enlaces a redes sociales aquí -->
+        </div>
+    </footer>
+    
+    <!-- Shikwasa Player JS -->
+    <script src="https://cdn.jsdelivr.net/npm/shikwasa@2.2.1/dist/shikwasa.min.js"></script>
+    <!-- Shikwasa Chapter Plugin (opcional) -->
+    <script src="https://cdn.jsdelivr.net/npm/shikwasa@2.2.1/dist/shikwasa.chapter.min.js"></script>
+    
+    <!-- Añadir un elemento de audio oculto para precargar los archivos de audio -->
+    <audio id="audio-preload" style="display: none;"></audio>
+    
+    <script>
+        // Función para parsear el feed RSS
+        async function fetchPodcastFeed() {
+            try {
+                const response = await fetch('feed.rss');
+                const xmlText = await response.text();
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+                
+                const channel = xmlDoc.querySelector('channel');
+                const items = xmlDoc.querySelectorAll('item');
+                
+                // Configurar el reproductor con el episodio más reciente
+                if (items.length > 0) {
+                    const latestItem = items[0];
+                    const title = latestItem.querySelector('title').textContent;
+                    const enclosure = latestItem.querySelector('enclosure');
+                    const audioSrc = enclosure ? enclosure.getAttribute('url') : '';
+                    const pubDate = latestItem.querySelector('pubDate').textContent;
+                    const description = latestItem.querySelector('description').textContent;
+                    
+                    // Inicializar el reproductor Shikwasa
+                    try {
+                        console.log('Inicializando reproductor con:', audioSrc);
+                        
+                        // Verificar si la URL del audio es válida
+                        const audioElement = document.getElementById('audio-preload');
+                        audioElement.src = audioSrc;
+                        
+                        // Limpiar el contenedor del reproductor si ya existe uno
+                        const playerContainer = document.getElementById('player-latest');
+                        playerContainer.innerHTML = '';
+                        
+                        // Crear el reproductor una vez que sabemos que la URL es válida
+                        window.player = new window.Shikwasa.Player({
+                            container: playerContainer,
+                            audio: {
+                                title: title,
+                                artist: 'G33K TEAM',
+                                cover: 'podcast.jpg',
+                                src: audioSrc,
+                            },
+                            theme: 'dark',
+                            themeColor: '#ef233c',
+                            download: true,
+                            speedOptions: [0.75, 1, 1.25, 1.5, 2],
+                            preload: 'auto'
+                        });
+                        
+                        // Añadir eventos para depuración
+                        window.player.on('error', (error) => {
+                            console.error('Error en el reproductor:', error);
+                        });
+                        
+                        window.player.on('play', () => {
+                            console.log('Reproducción iniciada');
+                        });
+                        
+                        window.player.on('pause', () => {
+                            console.log('Reproducción pausada');
+                        });
+                        
+                        console.log('Reproductor inicializado con éxito:', audioSrc);
+                    } catch (error) {
+                        console.error('Error al inicializar el reproductor:', error);
+                    }
+                    
+                    // Cargar todos los episodios
+                    const episodesContainer = document.getElementById('episodes-container');
+                    episodesContainer.innerHTML = '';
+                    
+                    items.forEach((item, index) => {
+                        const title = item.querySelector('title').textContent;
+                        const enclosure = item.querySelector('enclosure');
+                        const audioSrc = enclosure ? enclosure.getAttribute('url') : '';
+                        const pubDate = new Date(item.querySelector('pubDate').textContent);
+                        const formattedDate = pubDate.toLocaleDateString('es-ES', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                        });
+                        
+                        // Extraer una descripción corta
+                        let description = item.querySelector('description').textContent;
+                        const descriptionText = description.replace(/<[^>]*>/g, '');
+                        const shortDescription = descriptionText.substring(0, 150) + (descriptionText.length > 150 ? '...' : '');
+                        
+                        // Crear elemento de episodio en formato lista
+                        const episodeItem = document.createElement('div');
+                        episodeItem.className = 'episode-item';
+                        episodeItem.setAttribute('data-index', index);
+                        episodeItem.setAttribute('data-src', audioSrc);
+                        episodeItem.setAttribute('data-title', title);
+                        episodeItem.setAttribute('data-date', formattedDate);
+                        episodeItem.setAttribute('data-description', description);
+                        episodeItem.innerHTML = `
+                            <div class="episode-number">${index + 1}</div>
+                            <div class="episode-info">
+                                <h3 class="episode-title">${title}</h3>
+                                <div class="episode-meta">
+                                    <p class="episode-date">${formattedDate}</p>
+                                </div>
+                            </div>
+                            <div class="episode-actions">
+                                <button class="play-btn" data-index="${index}" data-src="${audioSrc}" data-title="${title}"></button>
+                            </div>
+                        `;
+                        
+                        // Hacer que todo el elemento sea clickeable para mostrar el modal
+                        episodeItem.style.cursor = 'pointer';
+                        episodeItem.addEventListener('click', function(e) {
+                            // Evitar que se active si se hace clic en el botón de reproducción
+                            if (!e.target.classList.contains('play-btn') && !e.target.closest('.play-btn')) {
+                                showEpisodeModal(
+                                    this.getAttribute('data-title'),
+                                    this.getAttribute('data-date'),
+                                    this.getAttribute('data-description'),
+                                    this.getAttribute('data-src')
+                                );
+                            }
+                        });
+                        
+                        episodesContainer.appendChild(episodeItem);
+                    });
+                    
+                    // Agregar eventos a todos los botones de reproducción después de que se hayan creado
+                    document.querySelectorAll('.play-btn').forEach(button => {
+                        button.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            
+                            const audioSrc = this.getAttribute('data-src');
+                            const title = this.getAttribute('data-title');
+                            
+                            console.log('Intentando reproducir:', audioSrc);
+                            
+                            // Verificar si la URL del audio es válida
+                            const audioElement = document.getElementById('audio-preload');
+                            audioElement.src = audioSrc;
+                            
+                            // Comprobar si el reproductor está inicializado
+                            if (!window.player) {
+                                console.error('El reproductor no está inicializado');
+                                alert('Error: El reproductor no está inicializado correctamente.');
+                                return;
+                            }
+                            
+                            try {
+                                // Limpiar el contenedor del reproductor
+                                const playerContainer = document.getElementById('player-latest');
+                                playerContainer.innerHTML = '';
+                                
+                                // Crear un nuevo reproductor para este episodio
+                                window.player = new window.Shikwasa.Player({
+                                    container: playerContainer,
+                                    audio: {
+                                        title: title,
+                                        artist: 'G33K TEAM',
+                                        cover: 'podcast.jpg',
+                                        src: audioSrc,
+                                    },
+                                    theme: 'dark',
+                                    themeColor: '#ef233c',
+                                    download: true,
+                                    speedOptions: [0.75, 1, 1.25, 1.5, 2],
+                                    preload: 'auto'
+                                });
+                                
+                                // Reproducir después de crear el nuevo reproductor
+                                setTimeout(() => {
+                                    window.player.play();
+                                    console.log('Reproduciendo:', audioSrc);
+                                    
+                                    // Desplazarse al reproductor
+                                    document.querySelector('.player-container').scrollIntoView({
+                                        behavior: 'smooth'
+                                    });
+                                }, 300);
+                            } catch (error) {
+                                console.error('Error al reproducir:', error);
+                                alert('Error al reproducir el episodio. Por favor, inténtalo de nuevo.');
+                            }
+                        });
+                    });
+                }
+            } catch (error) {
+                console.error('Error al cargar el feed del podcast:', error);
+            }
+        }
+        
+        // Cargar el feed cuando se cargue la página
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchPodcastFeed();
+            
+            // Configurar el modal
+            const modalOverlay = document.getElementById('episode-modal-overlay');
+            const modalClose = document.getElementById('modal-close');
+            const modalPlay = document.getElementById('modal-play');
+            
+            // Cerrar el modal al hacer clic en el botón de cerrar
+            modalClose.addEventListener('click', () => {
+                modalOverlay.style.display = 'none';
+            });
+            
+            // Cerrar el modal al hacer clic fuera del contenido
+            modalOverlay.addEventListener('click', (e) => {
+                if (e.target === modalOverlay) {
+                    modalOverlay.style.display = 'none';
+                }
+            });
+            
+            // Cerrar el modal al presionar la tecla Escape
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modalOverlay.style.display === 'flex') {
+                    modalOverlay.style.display = 'none';
+                }
+            });
+        });
+        
+        // Función para mostrar el modal con la información del episodio
+        function showEpisodeModal(title, date, description, audioSrc) {
+            const modalTitle = document.getElementById('modal-title');
+            const modalDate = document.getElementById('modal-date');
+            const modalDescription = document.getElementById('modal-description');
+            const modalPlay = document.getElementById('modal-play');
+            const modalOverlay = document.getElementById('episode-modal-overlay');
+            
+            // Establecer el contenido del modal
+            modalTitle.textContent = title;
+            modalDate.textContent = date;
+            
+            // Formatear la descripción para mejor legibilidad
+            let formattedDescription = description;
+            
+            // Convertir URLs en enlaces clickeables si no están ya en formato de enlace
+            if (!formattedDescription.includes('<a href')) {
+                formattedDescription = formattedDescription.replace(
+                    /(https?:\/\/[^\s]+)/g, 
+                    '<a href="$1" target="_blank">$1</a>'
+                );
+            }
+            
+            // Añadir saltos de línea para mejorar la legibilidad
+            formattedDescription = formattedDescription.replace(/\n/g, '<br>');
+            
+            // Destacar hashtags
+            formattedDescription = formattedDescription.replace(
+                /#(\w+)/g, 
+                '<span style="color: var(--accent-color); font-weight: bold;">#$1</span>'
+            );
+            
+            modalDescription.innerHTML = formattedDescription;
+            
+            // Configurar el botón de reproducción
+            modalPlay.onclick = function() {
+                console.log('Intentando reproducir desde modal:', audioSrc);
+                
+                // Verificar si la URL del audio es válida
+                const audioElement = document.getElementById('audio-preload');
+                audioElement.src = audioSrc;
+                
+                // Comprobar si el reproductor está inicializado
+                if (!window.player) {
+                    console.error('El reproductor no está inicializado');
+                    alert('Error: El reproductor no está inicializado correctamente.');
+                    return;
+                }
+                
+                try {
+                    // Limpiar el contenedor del reproductor
+                    const playerContainer = document.getElementById('player-latest');
+                    playerContainer.innerHTML = '';
+                    
+                    // Crear un nuevo reproductor para este episodio
+                    window.player = new window.Shikwasa.Player({
+                        container: playerContainer,
+                        audio: {
+                            title: title,
+                            artist: 'G33K TEAM',
+                            cover: 'podcast.jpg',
+                            src: audioSrc,
+                        },
+                        theme: 'dark',
+                        themeColor: '#ef233c',
+                        download: true,
+                        speedOptions: [0.75, 1, 1.25, 1.5, 2],
+                        preload: 'auto'
+                    });
+                    
+                    // Reproducir después de crear el nuevo reproductor
+                    setTimeout(() => {
+                        window.player.play();
+                        console.log('Reproduciendo desde modal:', audioSrc);
+                    }, 300);
+                } catch (error) {
+                    console.error('Error al crear nuevo reproductor desde modal:', error);
+                    alert('Error al reproducir el episodio. Por favor, inténtalo de nuevo.');
+                }
+                
+                // Cerrar el modal
+                modalOverlay.style.display = 'none';
+                
+                // Desplazarse al reproductor
+                document.querySelector('.player-container').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            };
+            
+            // Mostrar el modal
+            modalOverlay.style.display = 'flex';
+        }
+    </script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const copyBtn = document.getElementById('copy-rss');
+            const tooltip = document.getElementById('copy-tooltip');
+            
+            copyBtn.addEventListener('click', function() {
+                const feedUrl = document.getElementById('feed-url').value;
+                
+                // Crear un elemento de texto temporal
+                const tempInput = document.createElement('input');
+                tempInput.value = feedUrl;
+                document.body.appendChild(tempInput);
+                
+                // Seleccionar y copiar el texto
+                tempInput.select();
+                document.execCommand('copy');
+                
+                // Eliminar el elemento temporal
+                document.body.removeChild(tempInput);
+                
+                // Cambiar el texto del tooltip
+                tooltip.textContent = '¡Copiado!';
+                tooltip.classList.add('copy-success');
+                
+                // Mostrar el tooltip
+                tooltip.style.opacity = '1';
+                tooltip.style.visibility = 'visible';
+                
+                // Ocultar el tooltip después de 2 segundos
+                setTimeout(function() {
+                    tooltip.style.opacity = '0';
+                    tooltip.style.visibility = 'hidden';
+                    
+                    // Restaurar el texto original después de que se oculte
+                    setTimeout(function() {
+                        tooltip.textContent = 'Copiar URL del feed';
+                        tooltip.classList.remove('copy-success');
+                    }, 300);
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
