@@ -67,7 +67,9 @@ También profundizamos en Cloudflare LaLiga Bypass, una automatización creada p
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:explicit>No</itunes:explicit>
       <itunes:image href="https://i2.ytimg.com/vi/i3DIIoTF1f4/hqdefault.jpg"/>
-      <podcast:person group="Cast" role="Host" href="https://aitorroma.com" img="https://podcast.g33k.team/persons/aitor.jpg">Aitor Roma</podcast:person>
+      <podcast:person>
+        <podcast:person group="Cast" role="Host" href="https://aitorroma.com" img="https://podcast.g33k.team/persons/aitor.jpg">Aitor Roma</podcast:person>
+      </podcast:person>
     </item>
     <item>
       <guid isPermaLink="false">yt:video:L_i6fZx4gHU</guid>
