@@ -11,7 +11,7 @@ Nuestro ecosistema fomenta la colaboración entre mentes creativas y analíticas
       <uri>https://www.youtube.com/channel/UCmhVhM793njn02ArOCv3yDA</uri>
     </author>
     <link>https://www.youtube.com/channel/UCmhVhM793njn02ArOCv3yDA</link>
-    <atom:link href="https://podcast.g33k.team" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://podcast.g33k.team/feed.rss" rel="self" type="application/rss+xml"/>
     <language>es</language>
     <itunes:author>G33K TEAM</itunes:author>
     <itunes:type>episodic</itunes:type>
