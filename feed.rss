@@ -23,6 +23,43 @@ Nuestro ecosistema fomenta la colaboración entre mentes creativas y analíticas
     <itunes:image href="https://podcast.g33k.team/podcast.png"/>
     <itunes:category text="Technology"/>
     <item>
+      <guid isPermaLink="false">yt:video:zcobSThCfHk</guid>
+      <title>G33K TEAM Capitulo 5 - Temporada 1</title>
+      <description>¿De qué hablamos en este episodio?
+🔥 El drama real: ¿Cómo evitar pies congelados mientras programamos?  
+📱 Lynx: El nuevo framework de ByteDance que busca destronar a React Native.  
+☕ Java: Su incursión en el mundo de la IA. Opiniones, debates y predicciones.  
+🟣 OWL: Alternativa Open Source a Magnus para automatización de navegadores mediante Computer Vision.  
+🤖 Modelos Omnimodales como GPT-4o, su funcionamiento y el impacto en el desarrollo de aplicaciones.  
+💥 Caos en la ingeniería de software: estandarización, buenas prácticas y problemas recurrentes.  
+🎙️ Anuncio especial: ¡Nuestro podcast ya está disponible en todas las plataformas!
+
+Links útiles:  
+Lynx Framework → https://lynxjs.org/  
+OWL - Automatización Open Source → https://github.com/camel-ai/owl  
+🎧 Podcast Oficial → https://podcast.g33k.team
+
+Timestamps:  
+00:00:00 – Presentación y saludos  
+00:01:58 – Problema real: pies congelados  
+00:06:55 – Lynx: el nuevo framework de ByteDance  
+00:07:32 – Java e IA: ¿promesa o hype?  
+00:10:05 – OWL: alternativa open source a Magnus  
+00:12:19 – Modelos Omnimodales (GPT-4o y más)  
+00:26:36 – El caos de la estandarización en desarrollo  
+01:01:49 – ¡Ya tenemos podcast! Anuncio oficial  
+01:08:52 – Cierre y despedida
+
+#G33KTEAM #Temporada1 #Capitulo5 #Lynx #ByteDance #OWL #OpenSource #ReactNative #Java #InteligenciaArtificial #GPT4o #Omnimodal #DevOps #Infraestructura #Scraping #PodcastTech #Programacion #SoftwareLibre #Geeks</description>
+      <pubDate>2025-03-29T05:15:54+00:00</pubDate>
+      <link>https://www.youtube.com/watch?v=zcobSThCfHk</link>
+      <enclosure url="https://podcast.g33k.team/videos/zcobSThCfHk.mp3" length="100000000" type="audio/mpeg"/>
+      <itunes:duration>01:00:00</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>No</itunes:explicit>
+      <itunes:image href="https://i3.ytimg.com/vi/zcobSThCfHk/hqdefault.jpg"/>
+    </item>
+    <item>
       <guid isPermaLink="false">yt:video:5G9As2LuS9Q</guid>
       <title>G33K TEAM - Capítulo 4 temporada 1</title>
       <description>📺 G33K TEAM Capítulo 4 Temporada 1 🚀 #InteligenciaArtificial #Computación #Automatización
