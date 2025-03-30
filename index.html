@@ -48,27 +48,16 @@
             background: linear-gradient(180deg, #0A0A2A 0%, #0F0F35 100%);
         }
         
-        .logo-container {
+        .hero-container {
             margin-bottom: 1rem;
         }
         
-        .logo {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            margin-bottom: 1rem;
-            object-fit: contain;
-            border: none;
-            box-shadow: none;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            margin: 0.5rem 0;
-            font-weight: 700;
-            letter-spacing: 1px;
-            color: white;
-            text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue);
+        .hero-image {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: block;
+            height: auto;
         }
         
         .tagline {
@@ -484,17 +473,19 @@
 </head>
 <body>
     <header>
-        <div class="logo-container">
-            <img src="podcast.jpg" alt="G33K TEAM Logo" class="logo">
+        <div class="hero-container">
+            <img src="hero.png" alt="G33K TEAM Hero" class="hero-image">
         </div>
-        <h1>G33K TEAM</h1>
-        <p class="tagline">Tecnología sin filtros, directamente desde las trincheras</p>
+        <p class="tagline">¡Escucha nuestro podcast en tus plataformas favoritas! 🎧</p>
         <div class="subscribe-links">
             <a href="https://open.spotify.com/show/3Fl51oQt1Kec9aUAElSOn2" class="subscribe-btn" target="_blank">
                 <i class="fab fa-spotify" style="color: #1DB954;"></i> Spotify
             </a>
             <a href="https://podcasts.apple.com/es/podcast/g33k-team/id1687056747" class="subscribe-btn" target="_blank">
                 <i class="fab fa-apple" style="color: #B150E2;"></i> Apple Podcasts
+            </a>
+            <a href="https://music.amazon.es/podcasts/0d640dea-e88d-4232-b7cb-accd6f75edb7/g33k-team" class="subscribe-btn" target="_blank">
+                <i class="fab fa-amazon" style="color: #FF9900;"></i> Amazon Music
             </a>
             <a href="https://t.me/g33k_team/2" target="_blank" class="subscribe-btn">
                 <i class="fab fa-telegram" style="color: #0088cc;"></i> Telegram
