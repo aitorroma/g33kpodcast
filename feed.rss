@@ -23,6 +23,47 @@ Nuestro ecosistema fomenta la colaboración entre mentes creativas y analíticas
     <itunes:image href="https://podcast.g33k.team/podcast.png"/>
     <itunes:category text="Technology"/>
     <item>
+      <guid isPermaLink="false">yt:video:uSh9T5QTXNw</guid>
+      <title>G33K TEAM Capitulo 6 - Temporada 1</title>
+      <description>🎙️ 𝐆𝟑𝟑𝐊 𝐓𝐄𝐀𝐌 – 𝐂𝐚𝐩í𝐭𝐮𝐥𝐨 𝟔 | 𝐓𝐞𝐦𝐩𝐨𝐫𝐚𝐝𝐚 𝟏
+
+¡Bienvenidos al sexto episodio de Geek Talks!
+
+En este capítulo, 𝐉𝐞𝐬ú𝐬, 𝐓𝐞𝐭𝐞 𝐲 𝐀𝐢𝐭𝐨𝐫 se sumergen en el futuro del desarrollo impulsado por inteligencia artificial y agentes inteligentes.  
+
+📌 𝐓𝐞𝐦𝐚𝐬 𝐝𝐞𝐬𝐭𝐚𝐜𝐚𝐝𝐨𝐬:
+
+⭐ Cómo crear agentes conversacionales con voz en tiempo real  
+⭐ Agentes con interfaz visual y frameworks como 𝐄𝟐𝐁, 𝐈𝐧𝐟𝐢𝐧𝐢𝐭𝐞𝐘𝐨𝐮, 𝐋𝐢𝐯𝐞𝐊𝐢𝐭 y 𝐖𝐢𝐧𝐝𝐬𝐮𝐫𝐟  
+⭐ Reflexiones sobre backend, frontend e infraestructura en la nueva ola de desarrollo IA  
+⭐ OpenAI Paperbench: nuevo benchmark para modelos de lenguaje  
+⭐ Herramientas y plataformas clave para desarrolladores que trabajan con agentes  
+⭐ El cambio hacia el modelo 𝐴𝑔𝑒𝑛𝑡-𝑎𝑠-𝑎-𝑆𝑒𝑟𝑣𝑖𝑐𝑒  
+⭐ Análisis del nuevo modelo 𝐐𝐮𝐚𝐬𝐚𝐫 𝐀𝐥𝐩𝐡𝐚 en OpenRouter  
+⭐ Opiniones reales y herramientas probadas por el equipo
+
+🔧 𝐇𝐞𝐫𝐫𝐚𝐦𝐢𝐞𝐧𝐭𝐚𝐬 𝐦𝐞𝐧𝐜𝐢𝐨𝐧𝐚𝐝𝐚𝐬:  
+CouchDB · Cursor IDE · AI Studio (Gemini) · CapCut AI · Cline Bot · OpenRouter · Lovable.dev · Magic · 21st.dev  
+
+📚 No olvides revisar la lista completa de recursos en el enlace dentro del vídeo.
+
+🎧 𝐄𝐬𝐜𝐮𝐜𝐡𝐚 𝐧𝐮𝐞𝐬𝐭𝐫𝐨 𝐩𝐨𝐝𝐜𝐚𝐬𝐭 𝐞𝐧 𝐭𝐮 𝐩𝐥𝐚𝐭𝐚𝐟𝐨𝐫𝐦𝐚 𝐟𝐚𝐯𝐨𝐫𝐢𝐭𝐚:
+
+🌐 Web del podcast: https://podcast.g33k.team  
+Spotify · iVoox · Apple Podcasts · Amazon Music
+
+👉 Ú𝐧𝐞𝐭𝐞 𝐚 𝐥𝐚 𝐜𝐨𝐦𝐮𝐧𝐢𝐝𝐚𝐝:
+
+Telegram: https://t.me/g33k</description>
+      <pubDate>2025-04-05T04:43:14+00:00</pubDate>
+      <link>https://www.youtube.com/watch?v=uSh9T5QTXNw</link>
+      <enclosure url="https://podcast.g33k.team/videos/uSh9T5QTXNw.mp3" length="100000000" type="audio/mpeg"/>
+      <itunes:duration>01:00:00</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>No</itunes:explicit>
+      <itunes:image href="https://i2.ytimg.com/vi/uSh9T5QTXNw/hqdefault.jpg"/>
+    </item>
+    <item>
       <guid isPermaLink="false">yt:video:zcobSThCfHk</guid>
       <title>G33K TEAM Capitulo 5 - Temporada 1</title>
       <description>¿De qué hablamos en este episodio?
@@ -53,8 +94,8 @@ Timestamps:
 #G33KTEAM #Temporada1 #Capitulo5 #Lynx #ByteDance #OWL #OpenSource #ReactNative #Java #InteligenciaArtificial #GPT4o #Omnimodal #DevOps #Infraestructura #Scraping #PodcastTech #Programacion #SoftwareLibre #Geeks</description>
       <pubDate>2025-03-29T05:15:54+00:00</pubDate>
       <link>https://www.youtube.com/watch?v=zcobSThCfHk</link>
-      <enclosure url="https://podcast.g33k.team/videos/zcobSThCfHk.mp3" length="5242880" type="audio/mpeg"/>
-      <itunes:duration>00:09:35</itunes:duration>
+      <enclosure url="https://podcast.g33k.team/videos/zcobSThCfHk.mp3" length="59519445" type="audio/mpeg"/>
+      <itunes:duration>01:09:08</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:explicit>No</itunes:explicit>
       <itunes:image href="https://i3.ytimg.com/vi/zcobSThCfHk/hqdefault.jpg"/>
