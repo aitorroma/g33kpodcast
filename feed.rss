@@ -23,6 +23,39 @@ Nuestro ecosistema fomenta la colaboración entre mentes creativas y analíticas
     <itunes:image href="https://podcast.g33k.team/podcast.png"/>
     <itunes:category text="Technology"/>
     <item>
+      <guid isPermaLink="false">yt:video:eZgX9FmCEZ4</guid>
+      <title>G33K TEAM - S1E13</title>
+      <description>En el episodio 13, Aitor y Oriol defienden el fuerte solos (¡otra vez imprevistos con el resto del equipo!) y nos traen un arsenal de herramientas de IA que te van a volar la cabeza.
+
+Aitor estrena NimboxAI Studio, su herramienta recién salida del horno que permite transformar, combinar y hacer face swap con imágenes usando FLUX.1 Kontext - el nuevo modelo de Black Forest Labs que va más allá del text-to-image tradicional y permite edición contextual preservando elementos únicos. Desde convertirte en un Muppet hasta restaurar fotos familiares antiguas, pasando por crear el perfecto LinkedIn shot de Taylor Swift (¡sí, en serio!).
+
+Nos muestran Git MCP en acción: conecta cualquier repositorio de GitHub directamente a Claude, Cursor, VS Code y más. ¿Necesitas entender código que no escribiste tú? Ahora puedes chatear directamente con el repo y que te explique todo.
+
+Oriol comparte su experiencia real con OpenAI Codex: un agente programador que trabaja dentro de contenedores Docker, hace pull requests automáticamente y tiene un proceso de razonamiento tan humanizado que puedes auditarlo paso a paso. 11 minutos para crear un simple archivo de licencia MIT, ¡pero qué proceso!
+
+También exploran Scira MCP Chat como alternativa open source a Chainlit , y Oriol nos cuenta su batalla épica (y fallida) intentando modificar WhisperX para mejorar la detección de idiomas.
+
+PD: Los problemas de conexión de Aitor siguen siendo legendarios, pero al final conseguimos ver todas las demos. ¡Un día le tiraremos un cable directo al datacenter más cercano!
+
+Enlaces mencionados:
+
+    NimboxAI Studio: https://nimboxaistudio.com
+    FLUX.1 Kontext: https://bfl.ai/models/flux-kontext
+    Git MCP: https://gitmcp.io
+    OpenAI Codex: https://openai.com/codex
+    Scira MCP Chat: https://github.com/zaidmukaddam/scira-mcp-chat
+    Chainlit: https://github.com/Chainlit/chainlit
+    WhisperX: https://github.com/m-bain/whisperX
+    This Person Does Not Exist: https://thispersondoesnotexist.com</description>
+      <pubDate>2025-06-07T04:09:32+00:00</pubDate>
+      <link>https://www.youtube.com/watch?v=eZgX9FmCEZ4</link>
+      <enclosure url="https://podcast.g33k.team/videos/eZgX9FmCEZ4.mp3" length="100000000" type="audio/mpeg"/>
+      <itunes:duration>01:00:00</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>No</itunes:explicit>
+      <itunes:image href="https://i2.ytimg.com/vi/eZgX9FmCEZ4/hqdefault.jpg"/>
+    </item>
+    <item>
       <guid isPermaLink="false">yt:video:uSh9T5QTXNw</guid>
       <title>G33K TEAM Capitulo 6 - Temporada 1</title>
       <description>🎙️ 𝐆𝟑𝟑𝐊 𝐓𝐄𝐀𝐌 – 𝐂𝐚𝐩í𝐭𝐮𝐥𝐨 𝟔 | 𝐓𝐞𝐦𝐩𝐨𝐫𝐚𝐝𝐚 𝟏
@@ -54,11 +87,11 @@ Spotify · iVoox · Apple Podcasts · Amazon Music
 
 👉 Ú𝐧𝐞𝐭𝐞 𝐚 𝐥𝐚 𝐜𝐨𝐦𝐮𝐧𝐢𝐝𝐚𝐝:
 
-Telegram: https://t.me/g33k</description>
+Telegram: https://t.me/g33k_team</description>
       <pubDate>2025-04-05T04:43:14+00:00</pubDate>
       <link>https://www.youtube.com/watch?v=uSh9T5QTXNw</link>
-      <enclosure url="https://podcast.g33k.team/videos/uSh9T5QTXNw.mp3" length="100000000" type="audio/mpeg"/>
-      <itunes:duration>01:00:00</itunes:duration>
+      <enclosure url="https://podcast.g33k.team/videos/uSh9T5QTXNw.mp3" length="42113108" type="audio/mpeg"/>
+      <itunes:duration>01:11:32</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:explicit>No</itunes:explicit>
       <itunes:image href="https://i2.ytimg.com/vi/uSh9T5QTXNw/hqdefault.jpg"/>
@@ -99,32 +132,6 @@ Timestamps:
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:explicit>No</itunes:explicit>
       <itunes:image href="https://i3.ytimg.com/vi/zcobSThCfHk/hqdefault.jpg"/>
-    </item>
-    <item>
-      <guid isPermaLink="false">yt:video:5G9As2LuS9Q</guid>
-      <title>G33K TEAM - Capítulo 4 temporada 1</title>
-      <description>📺 G33K TEAM Capítulo 4 Temporada 1 🚀 #InteligenciaArtificial #Computación #Automatización
-¡Únete a nuestra comunidad! https://t.me/g33k_team
-
-¡El equipo de expertos en tecnología regresa con un episodio lleno de innovaciones disruptivas! 🧠 En este cuarto capítulo, exploramos las fronteras de la IA, computación cuántica y herramientas de automatización:
-
-
-🔊 OpenAI.fm - La revolución de los nuevos sistemas TTS y STT de OpenAI que están transformando la interacción por voz
-⚛️ Computación Cuántica - Analizamos los últimos avances y cómo están cambiando el panorama del procesamiento de datos
-🤖 Second Me (secondme.io) - La primera plataforma de identidad AI open-source que representa tu auténtico yo con privacidad total y memoria jerárquica
-🌐 Zen Browser - Solución definitiva para el caos digital con gestión inteligente de pestañas y flujos de trabajo
-
-Y mucho mas!!
-
-Nuestros geeks comparten casos de uso reales y experiencias prácticas para implementar estas tecnologías en tu día a día, con especial énfasis en cómo Second Me está creando un nuevo paradigma de identidad digital que representa en lugar de reemplazar al usuario.
-#InteligenciaArtificial #ComputaciónCuántica #Automatización #G33KTEAM #SecondMe</description>
-      <pubDate>2025-03-23T10:12:00+00:00</pubDate>
-      <link>https://www.youtube.com/watch?v=5G9As2LuS9Q</link>
-      <enclosure url="https://podcast.g33k.team/videos/5G9As2LuS9Q.mp3" length="40047836" type="audio/mpeg"/>
-      <itunes:duration>01:10:30</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:explicit>No</itunes:explicit>
-      <itunes:image href="https://i2.ytimg.com/vi/5G9As2LuS9Q/hqdefault.jpg"/>
     </item>
     <item>
       <guid isPermaLink="false">yt:video:i3DIIoTF1f4</guid>
@@ -187,18 +194,6 @@ Nuestros geeks comparten casos de uso reales y experiencias prácticas para impl
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:explicit>No</itunes:explicit>
       <itunes:image href="https://i1.ytimg.com/vi/L_i6fZx4gHU/hqdefault.jpg"/>
-    </item>
-    <item>
-      <guid isPermaLink="false">yt:video:sg32ulzTsMk</guid>
-      <title>G33K TEAM Capitulo 1 temporada 1</title>
-      <description>Bienvenidos al primer episodio de G33K TEAM, donde la innovación tecnológica se encuentra con el mundo real. En este capítulo inaugural, exploramos la intersección entre la inteligencia artificial, las estrategias de marketing digital y los principios de arquitectura de software que están transformando el panorama empresarial actual. Analizamos las últimas tendencias, compartimos casos de éxito y debatimos sobre cómo estas tecnologías están revolucionando la forma en que las empresas operan y se conectan con sus clientes. Acompáñanos en este viaje técnico donde descifraremos los componentes clave para construir soluciones tecnológicas escalables y efectivas en el mercado actual</description>
-      <pubDate>2025-03-05T10:36:10+00:00</pubDate>
-      <link>https://www.youtube.com/watch?v=sg32ulzTsMk</link>
-      <enclosure url="https://podcast.g33k.team/videos/sg32ulzTsMk.mp3" length="26811285" type="audio/mpeg"/>
-      <itunes:duration>00:42:51</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:explicit>No</itunes:explicit>
-      <itunes:image href="https://i4.ytimg.com/vi/sg32ulzTsMk/hqdefault.jpg"/>
     </item>
   </channel>
 </rss>
